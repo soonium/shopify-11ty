@@ -5,6 +5,7 @@
 [dev] 
   publish = "./dist"
   command = "npm run serve"
+  targetPort = 8081
 
 [[redirects]]
   from = "/api/*"
@@ -18,5 +19,7 @@
 
 
 [context.production]
-  environment = { SHOPIFY_API_ENDPOINT = "https://netlify-developer-starter.myshopify.com/api/unstable/graphql.json", SHOPIFY_STOREFRONT_API_TOKEN = "e9c4dbd5f540d4cefcb2518f7648caf9" }
+  environment = { SHOPIFY_API_ENDPOINT = "https://the-girls-bathroom-dev.myshopify.com/api/unstable/graphql.json", SHOPIFY_STOREFRONT_API_TOKEN = "a529c836e0cd8f73a1e9d9d39938ae64" }
 
+[context.dev]
+  environment = { SHOPIFY_API_ENDPOINT = "https://the-girls-bathroom-dev.myshopify.com/api/unstable/graphql.json", SHOPIFY_STOREFRONT_API_TOKEN = "a529c836e0cd8f73a1e9d9d39938ae64" }
