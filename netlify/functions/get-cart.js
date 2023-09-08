@@ -60,7 +60,7 @@ exports.handler = async (event) => {
                 }
               }
             }
-            estimatedCost {
+            cost {
               totalAmount {
                 amount
                 currencyCode

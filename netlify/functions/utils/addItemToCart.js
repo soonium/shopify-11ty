@@ -30,7 +30,7 @@ exports.addItemToCart = async ({ cartId, itemId, quantity }) => {
                   }
                 }
               }
-              estimatedCost {
+              cost {
                 totalAmount {
                   amount
                   currencyCode

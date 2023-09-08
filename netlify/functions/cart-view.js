@@ -69,16 +69,16 @@ exports.handler = async (event) => {
           <strong>Subtotal:</strong>
         </p>
         <p>Shipping:</p>
-        <p>Tax:</p>
+        ${cart.cost.totalTaxAmountEstimated ? `<p>Tax:</p>` : ''}
         <p>Total:</p>
       </div>
       <div class="cart-total-column">
         <p>
-          <strong>${cart.estimatedCost.subtotalAmount.amount} ${cart.estimatedCost.totalAmount.currencyCode} </strong>
+          <strong>${cart.cost.subtotalAmount.amount} ${cart.cost.subtotalAmount.currencyCode} </strong>
         </p>
         <p>Free Shipping</p>
-        <p>${cart.estimatedCost.totalTaxAmount.amount} ${cart.estimatedCost.totalAmount.currencyCode} </p>
-        <p>${cart.estimatedCost.totalAmount.amount} ${cart.estimatedCost.totalAmount.currencyCode} </p>
+        ${cart.totalTaxAmountEstimated ? `<p>${cart.cost.totalTaxAmount.amount !== null ? cart.cost.totalTaxAmount.amount : 'N/A'} ${cart.cost.totalAmount.currencyCode} </p>` : ''}
+        <p>${cart.cost.totalAmount.amount} ${cart.cost.totalAmount.currencyCode} </p>
       </div>
     </div>`;
   }
@@ -101,20 +101,17 @@ exports.handler = async (event) => {
   <body>
   
     <header class="app-header">
-      <h1>Shoperoni</h1>
+      <h1>The Girls Bathroom</h1>
       <nav class="main-nav">
         <ul>
           <li class="main-nav-item">
             <a href="/">All<a>
           </li>
           <li class="main-nav-item">
-            <a href="/cheeses">Cheeses<a>
+          <a href="/t-shirts">t-shirts<a>
           </li>
           <li class="main-nav-item">
-            <a href="/meats">Meats<a>
-          </li>
-          <li class="main-nav-item">
-            <a href="/boards">Boards<a>
+            <a href="/joggers">joggers<a>
           </li>
           <li class="main-nav-item">
             <div class="cart-size"></div>
@@ -196,7 +193,7 @@ exports.handler = async (event) => {
     
   return {
     statusCode: 200,
-    body: pageTemplate(items, result.cart.estimatedCost)
+    body: pageTemplate(items, result.cart.cost)
   };
 
 }

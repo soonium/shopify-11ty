@@ -34,7 +34,7 @@ exports.removeItemFromCart = async ({ cartId, lineId }) => {
                   }
                 }
               }
-              estimatedCost {
+              cost {
                 totalAmount {
                   amount
                   currencyCode
