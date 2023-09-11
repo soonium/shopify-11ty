@@ -6,6 +6,7 @@ exports.handler = async (event) => {
   const rootURL = process.env.URL || "https://localhost:8888";
 
   const cartId = event.queryStringParameters.cartId;
+
   const result = await fetch(`${rootURL}/api/get-cart`, {
     method: 'POST',
     headers: {
@@ -19,6 +20,19 @@ exports.handler = async (event) => {
     return res.json()
   });
   
+  const checkout_result = await fetch(`${rootURL}/api/get-checkout`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      cartId: cartId
+    }),
+  })
+  .then((res) =>{
+    return res.json()
+  });
+
 
   const itemTotal = function(price, quantity) {
     const totalPrice = Number(price) * Number(quantity)
@@ -141,6 +155,9 @@ exports.handler = async (event) => {
         ${cartTotals(result.cart)}
         </section>
         </div>
+        <div>
+          <a href = "${checkout_result.cart.checkoutUrl}"> CHECKOUT </A>
+        </div
       </article>
     </div>
     </main>
@@ -176,15 +193,6 @@ exports.handler = async (event) => {
         </div>
       </section>
   
-      <div class="project-credit">
-        <p>
-          This project is
-          <a href="https://github.com/philhawksworth/shopify-11ty">open source on GitHub </a>,
-          hosted with <a href="https://bit.ly/2G29YwK">Netlify</a>, built with
-          <a href="https://11ty.dev/">Eleventy</a>
-          and made by Phil Hawksworth (<a href="https://twitter.com/philhawksworth">@philhawksworth</a>)
-        </p>
-      </div>
     </footer>
     <script src="/js/shopping-ui.js"></script>
   </body>
