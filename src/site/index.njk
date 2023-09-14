@@ -9,3 +9,10 @@ head1: Band-A
   {% include "product_summary.njk" %}
   {% endfor %}
 </ul>
+
+
+<ul class="product-grid">
+  {% for item in posts %}
+  {% include "blog_summary.njk" %}
+  {% endfor %}
+</ul>

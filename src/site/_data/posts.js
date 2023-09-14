@@ -15,6 +15,7 @@ module.exports = async () => {
                   featuredImage {
                     node {
                       mediaItemUrl
+                      altText
                     }
                   }
                 }
