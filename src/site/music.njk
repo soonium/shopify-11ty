@@ -1,12 +1,12 @@
 ---
-title: T Shirts
+title: Music
 layout: layouts/base.njk
-head1: The Girls Bathroom
+head1: Band-A
 ---
 
 <ul class="product-grid">
   {% for item in products %}
-  {% if ( item.node.productType == "T Shirt") %}
+  {% if ( item.node.productType == "Music") %}
     {% include "product_summary.njk" %}
   {% endif %}
   {% endfor %}

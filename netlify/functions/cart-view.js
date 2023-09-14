@@ -71,7 +71,7 @@ exports.handler = async (event) => {
       console.log(`No basket`);
       return `<div class="cart-total-content">
         <div class="cart-total-column">
-          <a href="/">What you need is some meats and cheeses!</a>
+          <a href="/">Empty Cart</a>
         </div>
       </div>`;
     }
@@ -115,22 +115,22 @@ exports.handler = async (event) => {
   <body>
   
     <header class="app-header">
-      <h1>The Girls Bathroom</h1>
+      <h1>Band-A</h1>
       <nav class="main-nav">
         <ul>
-          <li class="main-nav-item">
-            <a href="/">All<a>
-          </li>
-          <li class="main-nav-item">
-          <a href="/t-shirts">t-shirts<a>
-          </li>
-          <li class="main-nav-item">
-            <a href="/joggers">joggers<a>
-          </li>
-          <li class="main-nav-item">
-            <div class="cart-size"></div>
-            <a href="/cart" class="cart cartLink">Shopping Cart</a>
-          </li>
+        <li class="main-nav-item">
+          <a href="/">All<a>
+        </li>
+        <li class="main-nav-item">
+          <a href="/merch">merch<a>
+        </li>
+        <li class="main-nav-item">
+          <a href="/music">music<a>
+        </li>
+        <li class="main-nav-item">
+          <div class="cart-size"></div>
+          <a href="/cart" class="cart cartLink">Shopping Cart</a>
+        </li>
         </ul>
       </nav>
     </header>
@@ -157,6 +157,7 @@ exports.handler = async (event) => {
         </div>
         <div>
           <a href = "${checkout_result.cart.checkoutUrl}"> CHECKOUT </A>
+          <br/>
         </div
       </article>
     </div>
@@ -164,10 +165,9 @@ exports.handler = async (event) => {
     <footer>
       <section class="testimonial">
         <h2>
-          "The interplay of flavors between the cheese, meats and fruits is an
-          absolute delight."
+          NEW ALBUM OUT NOW
         </h2>
-        <p>Paul Hotcakes</p>
+        <p>Buy Now!</p>
       </section>
       <section class="app-footer-links">
         <ul>

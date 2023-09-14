@@ -1,12 +1,12 @@
 ---
-title: Joggers
+title: Merch
 layout: layouts/base.njk
-head1: The Girls Bathroom
+head1: Band-A
 ---
 
 <ul class="product-grid">
   {% for item in products %}
-  {% if ( item.node.productType == "Joggers") %}
+  {% if ( item.node.productType == "Merch") %}
     {% include "product_summary.njk" %}
   {% endif %}
   {% endfor %}
