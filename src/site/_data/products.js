@@ -13,6 +13,9 @@ module.exports = async () => {
             title
             productType
             totalInventory
+            gates {
+							id
+						}
             variants(first: 5) {
               edges {
                 node {
