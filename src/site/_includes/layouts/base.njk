@@ -52,11 +52,12 @@
       </ul>
       <div class="newsletter">
         <h2 class="newsletter-title">Sign up for our newsletter:</h2>
-        <input
-          class="newsletter-input"
-          type="email"
-          placeholder="Enter your email"
-        />
+        <form name="contact" method="POST" netlify>
+        <p>
+          <label>Email <input placeholder="Enter your email" class="newsletter-input" type="email" name="email" /></label>
+          <button type="submit">Send</button>
+        </p>
+        </form>
       </div>
     </section>
   </footer>
