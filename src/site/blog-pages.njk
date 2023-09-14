@@ -1,0 +1,10 @@
+---
+pagination:
+  data: posts
+  alias: item
+  size: 1
+permalink: "/blog/{{ item.node.slug | slug }}/index.html"
+layout: layouts/base.njk
+head1: Band-A
+---
+{% include "blog_detail.njk" %}
