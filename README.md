@@ -1,11 +1,4 @@
-# Shopify Storefront reference with 11ty
-
-A reference site for exploring the Shopify storefront API with Eleventy
-
-Running at https://shopify-11ty.netlify.app/
-Blogged at https://www.netlify.com/blog/
-
-
+# Netlify / Shopify / WordPress - Simple Demo Site
 
 ```
 # install the dependencies
