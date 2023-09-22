@@ -8,7 +8,7 @@ const httpsAgent = new https.Agent({
 require('dotenv').config();
 exports.postToWordPress = async ({ query, variables }) => {
   try {
-    const result = await fetch("https://wp-local.com/index.php?graphql", {
+    const result = await fetch( process.env.WP_QL_ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

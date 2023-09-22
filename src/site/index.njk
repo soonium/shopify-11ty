@@ -5,14 +5,12 @@ head1: Band-A
 ---
 
 <ul class="product-grid">
+  {% for item in posts %}
+  {% include "blog_summary.njk" %}
+  {% endfor %}
   {% for item in products %}
   {% include "product_summary.njk" %}
   {% endfor %}
 </ul>
 
 
-<ul class="product-grid">
-  {% for item in posts %}
-  {% include "blog_summary.njk" %}
-  {% endfor %}
-</ul>
