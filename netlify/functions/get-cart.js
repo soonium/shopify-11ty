@@ -24,6 +24,7 @@ exports.handler = async (event) => {
   try {
     console.log('--------------------------------')
     console.log('Retrieving existing cart...')
+    console.log(cartId)
     console.log('--------------------------------')
     const shopifyResponse = await postToShopify({
       query: `

@@ -22,3 +22,6 @@
 
 [context.dev]
   environment = { WP_QL_ENDPOINT = "https://wp-gqltest-dev.pushsys.io/index.php?graphql", SHOPIFY_API_ENDPOINT = "https://cirkay-fan-pass-demo.myshopify.com/api/unstable/graphql.json", SHOPIFY_STOREFRONT_API_TOKEN = "0c1a47570c3b1fd7f57e14248ea482ae" }
+
+[context.staging]
+  environment = { WP_QL_ENDPOINT = "https://wp-gqltest-dev.pushsys.io/index.php?graphql", SHOPIFY_API_ENDPOINT = "https://cirkay-fan-pass-demo.myshopify.com/api/unstable/graphql.json", SHOPIFY_STOREFRONT_API_TOKEN = "0c1a47570c3b1fd7f57e14248ea482ae" }
