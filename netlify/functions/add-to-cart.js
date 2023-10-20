@@ -47,6 +47,7 @@ exports.handler = async (event) => {
   if (cartId) {
     console.log('--------------------------------')
     console.log('Adding item to existing cart...')
+    console.log(itemId)
     console.log('--------------------------------')
 
     const shopifyResponse = await addItemToCart({
@@ -62,6 +63,7 @@ exports.handler = async (event) => {
   } else {
     console.log('--------------------------------')
     console.log('Creating new cart with item...')
+    console.log(itemId)
     console.log('--------------------------------')
 
     console.log(itemId, quantity);
