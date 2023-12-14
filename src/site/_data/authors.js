@@ -2,10 +2,10 @@ const groq = require('groq')
 const {createClient} = require('@sanity/client')
 
 const client = createClient({
-    projectId: '5y5s7omv',
+    projectId: '9s1ixzac',
     dataset: 'production',
     apiVersion: '2023-05-03',
-    token: 'skd3IKZwJFkUfEG7YTOFep7z4y1LU6EFDcQV28bBOlSGnJrR6dhBvF2dv7xT0eTiosHrSbJqDj4QR3kigjQUdrPVBt5LiJq8sJXukFKw9JfoS8nGaXThyrKFfibDZBEzkDrvxv0ICTRLK4WNomtWll0h41Noqw6h6RJTsq98alG3k95Gf9PH',
+    token: 'skUpduAw4S3ija62dmCpV744qW6S8G2yT7Iyak054yPkZpzv2ivvFL51MZCOPu5Cql2k61Rtj3vIijiiu4jbX9lIhLWVUknFCEVNAOJnIh94zS9uvk9iUcNQgHxrbRsWUsvrONAG5a08SPgoAFYbeZfpz0KZOFl6x6WOasQvwwkdwV1R7761',
     useCdn: false,
   })
 
