@@ -20,7 +20,7 @@ exports.postToShopify = async ({ query, variables }) => {
       console.log({ result })
       return 'No results found.'
     }
-    /* console.log(JSON.stringify(result.data, null, 2)) */
+    console.log(JSON.stringify(result.data, null, 2))
     return result.data
   } catch (error) {
     console.log(error)
