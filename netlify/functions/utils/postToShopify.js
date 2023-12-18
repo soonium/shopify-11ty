@@ -3,10 +3,12 @@ const fetch = require('node-fetch');
 
 require('dotenv').config();
 
-console.log("SHOPIFY ENDPOINT>>> " + process.env.SHOPIFY_API_ENDPOINT);
 
 exports.postToShopify = async ({ query, variables }) => {
   try {
+    console.log("SHOPIFY ENDPOINT>>> " + process.env.SHOPIFY_API_ENDPOINT);
+    console.log("READY TO POST >> " + JSON.stringify({ query, variables }));
+
     const result = await fetch(process.env.SHOPIFY_API_ENDPOINT, {
       method: 'POST',
       headers: {
