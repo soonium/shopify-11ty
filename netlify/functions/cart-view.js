@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 exports.handler = async (event) => {
 
   const rootURL = process.env.URL || "https://localhost:8888";
+  console.log("URL>> " + rootURL);
 
   const cartId = event.queryStringParameters.cartId;
 
