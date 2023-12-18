@@ -7,6 +7,7 @@ exports.handler = async (event) => {
   console.log("URL>> " + rootURL);
 
   const cartId = event.queryStringParameters.cartId;
+  console.log("cartId>> " + cartId); 
 
   const result = await fetch(`${rootURL}/api/get-cart`, {
     method: 'POST',
